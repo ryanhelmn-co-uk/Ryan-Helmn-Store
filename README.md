@@ -22,6 +22,9 @@ Converts Umbraco front end into a REST API utilising modelsbuilder which allows 
 uSync: https://github.com/KevinJump/uSync
 Makes deployments simpler between environments
 
+Matryoshka: https://github.com/skttl/umbraco-matryoshka
+Adds tabs back to Umbraco v8
+
 # Setup
 To get started
 1. You'll want to restore the bacpac into your SQL server.

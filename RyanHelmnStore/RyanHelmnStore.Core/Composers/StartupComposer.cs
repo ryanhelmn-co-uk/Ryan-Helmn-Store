@@ -1,4 +1,5 @@
-﻿using Umbraco.Core;
+﻿using RyanHelmnStore.Core.Components;
+using Umbraco.Core;
 using Umbraco.Core.Composing;
 using Umbraco.Web;
 using Umbraco.Web.Dashboards;
@@ -26,6 +27,8 @@ namespace RyanHelmnStore.Core.Composers
             #endregion
 
             #region Components
+
+            composition.Components().Append<BundleComponent>();
 
             #endregion
 

@@ -1,0 +1,58 @@
+﻿@using RyanHelmnStore.Core.Extensions
+@inherits UmbracoViewPage<IBasePage>
+
+@if (Model is HomePage homePage)
+{
+    var hasBackgroundImage = homePage.HeroBannerBackgroundImage != null;
+    var backgroundUrl = hasBackgroundImage ? $"style=\"background: url('{homePage.HeroBannerBackgroundImage.Url(mode: UrlMode.Relative)}')\"" : null;
+
+    <section class="hero pb-3 bg-cover bg-center d-flex align-items-center @(!hasBackgroundImage ? "bg-light" : "")" @Html.Raw(backgroundUrl)>
+        <div class="container py-5">
+            <div class="row px-4 px-lg-5">
+                <div class="col-lg-6">
+                    @if (!homePage.HeroBannerTagline.IsNullOrWhiteSpace())
+                    {
+                        <p class="text-muted small text-uppercase mb-2">@homePage.HeroBannerTagline</p>
+                    }
+
+                    <h1 class="h2 text-uppercase mb-3">@homePage.HeroBannerTitle.IfBlank(homePage.Name)</h1>
+                    
+                    @if (homePage.HeroBannerLink != null)
+                    {
+                        @homePage.HeroBannerLink.RenderLink("btn btn-dark")
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="h2 text-uppercase mb-0">@Model.Name</h1>
+                </div>
+                <div class="col-lg-6 text-lg-right">
+                    <nav aria-label="breadcrumb">
+                        @RenderBreadcrumb(Model)
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@helper RenderBreadcrumb(IBasePage currentPage)
+{
+    var pages = currentPage.Ancestors(1).OfType<IBasePage>().Reverse();
+    <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
+        @foreach (var page in pages)
+        {
+            <li class="breadcrumb-item"><a href="@page.Url()">@page.Name</a></li>
+        }
+
+        <li class="breadcrumb-item active" aria-current="page">@currentPage.Name</li>
+    </ol>
+}

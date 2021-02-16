@@ -260,16 +260,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\BundleComponent.cs" />
     <Compile Include="Composers\StartupComposer.cs" />
+    <Compile Include="DocumentTypes\Generated\BasePage.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\File.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\Folder.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\HomePage.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\Image.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\Member.generated.cs" />
+    <Compile Include="DocumentTypes\Generated\Website.generated.cs" />
+    <Compile Include="DocumentTypes\Partials\WebsitePartial.cs" />
+    <Compile Include="Enums\SitemapDisplayType.cs" />
+    <Compile Include="Extensions\Pages\IBasePageExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UmbracoHelperExtensions.cs" />
+    <Compile Include="Extensions\UmbracoLinkExtensions.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
