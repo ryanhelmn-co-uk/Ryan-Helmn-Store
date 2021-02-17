@@ -45,6 +45,13 @@ namespace RyanHelmnStore.Core.DocumentTypes
 		// properties
 
 		///<summary>
+		/// Categories
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		[ImplementPropertyType("categories")]
+		public global::Umbraco.Core.Models.Blocks.BlockListModel Categories => this.Value<global::Umbraco.Core.Models.Blocks.BlockListModel>("categories");
+
+		///<summary>
 		/// Tagline
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]

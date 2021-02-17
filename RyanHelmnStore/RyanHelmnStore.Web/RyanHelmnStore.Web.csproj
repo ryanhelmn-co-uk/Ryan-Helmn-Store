@@ -258,9 +258,6 @@
     <Reference Include="uSync8.Core, Version=8.8.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\uSync.Core.8.8.3\lib\net472\uSync8.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Vendr.Checkout, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vendr.Checkout.1.2.0\lib\net472\Vendr.Checkout.dll</HintPath>
-    </Reference>
     <Reference Include="Vendr.Core, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vendr.Core.1.5.0\lib\net472\Vendr.Core.dll</HintPath>
     </Reference>
@@ -334,14 +331,6 @@
     <Content Include="App_Plugins\uSync8\usync_883.css" />
     <Content Include="App_Plugins\uSync8\uSync_883.js" />
     <Content Include="App_Plugins\Vendr.uSync\lang\en-us.xml" />
-    <Content Include="App_Plugins\VendrCheckout\BackOffice\resources\vendrcheckout.resource.js" />
-    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dashboards\installer.controller.js" />
-    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dashboards\installer.html" />
-    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dialogs\installer.controller.js" />
-    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dialogs\installer.html" />
-    <Content Include="App_Plugins\VendrCheckout\Config\vendrcheckout.order.editor.config.js" />
-    <Content Include="App_Plugins\VendrCheckout\Lang\en-US.xml" />
-    <Content Include="App_Plugins\VendrCheckout\Scripts\vendrcheckout.js" />
     <Content Include="App_Plugins\Vendr\assets\fonts\vendr.svg" />
     <Content Include="App_Plugins\Vendr\assets\images\vendr-bg.png" />
     <Content Include="App_Plugins\Vendr\assets\images\vendr-logo.png" />
@@ -725,21 +714,6 @@
     <Content Include="assets\vendor\node-sass\vendor\linux-x64-64\binding.node" />
     <Content Include="assets\vendor\nouislider\CHANGELOG.MD" />
     <Content Include="App_Plugins\Our.Umbraco.Matryoshka\package.manifest" />
-    <Content Include="App_Plugins\VendrCheckout\package.manifest" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutGiftCardEmail.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutOrderConfirmationEmail.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutOrderErrorEmail.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Partials\VendrCheckoutOrderInfo.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Partials\VendrCheckoutPrevNext.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutConfirmationPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutInformationPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutMaster.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPaymentMethodPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPaymentPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutReviewPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutShippingMethodPage.cshtml" />
-    <Content Include="App_Plugins\VendrCheckout\Views\Web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -749,7 +723,6 @@
     <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
-    <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Views\Vendr\Emails\GiftCardEmail.cshtml" />
     <Content Include="Views\Vendr\Emails\OrderConfirmationEmail.cshtml" />
     <Content Include="Views\Vendr\Emails\OrderErrorEmail.cshtml" />
@@ -764,6 +737,8 @@
     <Content Include="Views\CollectionPage.cshtml" />
     <Content Include="Views\ProductPage.cshtml" />
     <Content Include="Views\ShopPage.cshtml" />
+    <Content Include="Views\Partials\MainContent\MainContent.cshtml" />
+    <Content Include="Views\Partials\MainContent\Blocks\FeaturedCategoriesBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

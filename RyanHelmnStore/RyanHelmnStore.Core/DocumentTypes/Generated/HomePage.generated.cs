@@ -21,7 +21,7 @@ namespace RyanHelmnStore.Core.DocumentTypes
 {
 	/// <summary>Home Page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IBasePage
+	public partial class HomePage : PublishedContentModel, IBasePage, IContentTab
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -99,5 +99,12 @@ namespace RyanHelmnStore.Core.DocumentTypes
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		[ImplementPropertyType("xmlSitemapDisplay")]
 		public string XmlSitemapDisplay => global::RyanHelmnStore.Core.DocumentTypes.BasePage.GetXmlSitemapDisplay(this);
+
+		///<summary>
+		/// Main Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		[ImplementPropertyType("mainContent")]
+		public global::Umbraco.Core.Models.Blocks.BlockListModel MainContent => global::RyanHelmnStore.Core.DocumentTypes.ContentTab.GetMainContent(this);
 	}
 }

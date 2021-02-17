@@ -49,7 +49,7 @@ namespace RyanHelmnStore.Core.DocumentTypes
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		[ImplementPropertyType("category")]
-		public global::Umbraco.Web.Models.Link Category => this.Value<global::Umbraco.Web.Models.Link>("category");
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Category => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("category");
 
 		///<summary>
 		/// Image

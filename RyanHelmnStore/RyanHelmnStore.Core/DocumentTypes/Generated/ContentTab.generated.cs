@@ -19,43 +19,49 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace RyanHelmnStore.Core.DocumentTypes
 {
-	/// <summary>[Vendr Checkout] Checkout Step Page</summary>
-	[PublishedModel("vendrCheckoutCheckoutStepPage")]
-	public partial class VendrCheckoutCheckoutStepPage : VendrCheckoutBasePage
+	// Mixin Content Type with alias "contentTab"
+	/// <summary>Content Tab</summary>
+	public partial interface IContentTab : IPublishedContent
+	{
+		/// <summary>Main Content</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		global::Umbraco.Core.Models.Blocks.BlockListModel MainContent { get; }
+	}
+
+	/// <summary>Content Tab</summary>
+	[PublishedModel("contentTab")]
+	public partial class ContentTab : PublishedContentModel, IContentTab
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
-		public new const string ModelTypeAlias = "vendrCheckoutCheckoutStepPage";
+		public new const string ModelTypeAlias = "contentTab";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<VendrCheckoutCheckoutStepPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentTab, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public VendrCheckoutCheckoutStepPage(IPublishedContent content)
+		public ContentTab(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Short Step Name: A short name for this step to display in the checkout navigation.
+		/// Main Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
-		[ImplementPropertyType("vendrShortStepName")]
-		public string VendrShortStepName => this.Value<string>("vendrShortStepName");
+		[ImplementPropertyType("mainContent")]
+		public global::Umbraco.Core.Models.Blocks.BlockListModel MainContent => GetMainContent(this);
 
-		///<summary>
-		/// Step Type: The checkout step to display for this step of the checkout flow.
-		///</summary>
+		/// <summary>Static getter for Main Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
-		[ImplementPropertyType("vendrStepType")]
-		public string VendrStepType => this.Value<string>("vendrStepType");
+		public static global::Umbraco.Core.Models.Blocks.BlockListModel GetMainContent(IContentTab that) => that.Value<global::Umbraco.Core.Models.Blocks.BlockListModel>("mainContent");
 	}
 }
