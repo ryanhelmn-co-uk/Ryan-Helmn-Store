@@ -708,7 +708,6 @@
     <Content Include="config\uSync8.config" />
     <Content Include="App_Plugins\uSync8\package.manifest" />
     <Content Include="App_Plugins\uSync8\addons.json" />
-    <Content Include="config\ConnectionStrings.config" />
     <Content Include="assets\css\style.blue.min.css.map" />
     <Content Include="assets\css\style.default.min.css.map" />
     <Content Include="assets\css\style.gold.min.css.map" />
@@ -763,6 +762,8 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Partials\HeroBanner.cshtml" />
     <Content Include="Views\CollectionPage.cshtml" />
+    <Content Include="Views\ProductPage.cshtml" />
+    <Content Include="Views\ShopPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
